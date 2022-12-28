@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+    <title>MON SITE</title>
+        <script src="darkmode.js"></script> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="styles.css"> 
+        <link rel="stylesheet" href="contact.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/2367b4fde0.js" crossorigin="anonymous"></script>
+   </head>
+    <body>
+    
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">OM</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Le Club
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="histoireclub.html">Histoire du Club</a>
+          <a href="palmare.html">Palmares</a>
+          <a href="Personalite.html">Personalités Historiques</a>
+        </div>
+      </div> 
+      
+      <a href="Contact.html">Contact</a>
+      <div class="dark"><button onclick="darkmode()" > <i class="fa-solid fa-dharmachakra"></i></button> </div>
+        <div>
+          <h1 style="text-align: center;">Olympique  de  Marseille</h1>
+        </div>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+<h2  >Formulaire de contact</h2>
+
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Nom</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Prenom</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="email" >email</label>
+    </div>
+    <div class="col-75">
+        <input type="text" id="email" name="email" placeholder="Your email..">
+      </div>
+    <div class="col-75">
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Subject</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Laisser un message.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+
+<footer>
+    <p>Mamadou . All rights reserved.</p>
+</footer>
+
+  
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+  <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+  
+      document.querySelector('jsuites-color').addEventListener('onchange', function(e) {
+      // Set the font color
+      var topnav= document.getElementById("myTopnav")
+      e.target.children[0].style.color = this.value;
+      topnav.style.backgroundColor=this.value;
+      // Show on console
+      console.log('New value:' + this.value);
+  });
+      </script>
+</body>
+</html>

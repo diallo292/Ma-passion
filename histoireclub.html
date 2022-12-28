@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+  <title>MON SITE</title>
+  <meta charset="UTf-8">
+  <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="darkmode.js"></script> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .mySlides {display:none;}
+    </style>
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
+    <script src="https://jsuites.net/v4/jsuites.webcomponents.js"></script>
+    <script src="https://kit.fontawesome.com/2367b4fde0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">OM</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Le Club
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="histoireclub.html">Histoire du Club</a>
+      <a href="palmare.html">Palmares</a>
+      <a href="Personalite.html">Personalités Historiques</a>
+    </div>
+  </div> 
+  
+  <a href="Contact.html">Contact</a>
+  <div><jsuites-color value="#009688"></jsuites-color></div>
+  <div class="dark"><button onclick="darkmode()" > <i class="fa-solid fa-dharmachakra"></i></button> </div>
+  
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="flex-container">
+    <div><h1 style="text-align: center;">HISTOIRE DE l'OM</h1></div>
+    <div>L'Olympique de Marseille (OM) est un club de football français fondé en 1899 à Marseille par René Dufaure de Montmirail. 
+        Le club marseillais joue au stade de l'Huveaune de 1904 à 1937, date à laquelle est inauguré le stade Vélodrome. 
+        Auparavant, le club remporte sa première Coupe de France en 1924 et devient le tout premier club provincial à s'adjuger ce titre.
+        L'OM fait partie des clubs ayant joués la saison inaugurale 1932-1933 et qui évoluent encore en Ligue 1 aujourd'hui. 
+        Après un premier titre de champion de France en 1929, dans une compétition aujourd'hui disparue,
+        le club phocéen remporte son premier championnat professionnel en 1937, 
+        avant d'être rétrogradé pour la première fois en deuxième division en 1959.</div>
+        <div class="card">
+            <img src="René_Dufaure.jpg" alt="OM" style="width:45%;" >
+            <div class="container">
+              <h4><b>Rene dufaure  </b></h4> 
+              <p>Fondateur de l'olympique de marseille, il occupa la fonction de president de 1899 à 1902</p> 
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="papediouf.jpg" style="width:45%; " alt="OM">
+            <div class="container">
+              <h4><b>Pape Diouf  </b></h4> 
+              <p>Ancien president des années 2000</p> 
+            </div>
+          </div>
+          <div class="card">
+            <img src="tapie.jpg" alt="OM" style="width:45%; " >
+            <div class="container">
+              <h4><b>Bernard Tapie  </b></h4> 
+              <p>Ancien president des années 90</p> 
+            </div>
+          </div>
+          
+
+        </div>
+
+
+
+<footer>
+    <p>Mamadou . All rights reserved.</p>
+</footer>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    document.querySelector('jsuites-color').addEventListener('onchange', function(e) {
+    // Set the font color
+    var topnav= document.getElementById("myTopnav")
+    e.target.children[0].style.color = this.value;
+    topnav.style.backgroundColor=this.value;
+    // Show on console
+    console.log('New value:' + this.value);
+});
+    </script>
+</body>
+</html>

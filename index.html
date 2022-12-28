@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+  <title>MON SITE</title>
+  <meta charset="UTf-8">
+  <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="darkmode.js"></script> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .mySlides {display:none;}
+    </style>
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
+    <script src="https://jsuites.net/v4/jsuites.webcomponents.js"></script>
+    <script src="https://kit.fontawesome.com/2367b4fde0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">OM</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Le Club
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="histoireclub.html">Histoire du Club</a>
+      <a href="palmare.html">Palmares</a>
+      <a href="Personalite.html">Personalités Historiques</a>
+      <a href="Personalite.html">les equipes emblematiques</a>
+      
+    </div>
+  </div> 
+  
+  <a href="Contact.html">Contact</a>
+  <jsuites-color style="padding: 10%; color: white; text-align: center;" value="#009688"> change la couleur de la barre </jsuites-color>
+  <div class="dark" style="color: white;">Mode sombre   <button onclick="darkmode()" > <i class="fa-solid fa-dharmachakra"></i></button> </div>
+ 
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="flex-container">
+    
+    <div class="w3-content w3-section" style="max-width:500px">
+        <img class="mySlides" src="equipe.jpg" alt="OM" style="width:100%" >
+        <img class="mySlides" src="cap2.png"  alt="OM" style="width:100%" >
+        <img class="mySlides" src="cap3.png" alt="OM"  style="width:100%" >
+      </div>
+          
+        </div>
+
+      
+      
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+
+    document.querySelector('jsuites-color').addEventListener('onchange', function(e) {
+    // Set the font color
+    var topnav= document.getElementById("myTopnav")
+    e.target.children[0].style.color = this.value;
+    topnav.style.backgroundColor=this.value;
+    // Show on console
+    console.log('New value:' + this.value);
+});
+    </script>
+
+</body>
+</html>
